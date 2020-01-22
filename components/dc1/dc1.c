@@ -439,7 +439,7 @@ esp_err_t dc1_init(void)
     dc1_i2c_init();
     dc1_led_init();
     dc1_key0_init();
-    cmd_data = 0xc0;  
+    cmd_data = 0x00;  
     dc1_i2c_write(0x01, cmd_data);
     TimerHandle_t timer = xTimerCreate("dc1_key_handler", 
                                       (30 / portTICK_RATE_MS),  
